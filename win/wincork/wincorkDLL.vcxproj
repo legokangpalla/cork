@@ -66,12 +66,17 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\src;$(SolutionDir)..\..\src\accel;$(SolutionDir)..\..\src\file_formats;$(SolutionDir)..\..\src\isct;$(SolutionDir)..\..\src\math;$(SolutionDir)..\..\src\mesh;$(SolutionDir)..\..\src\rawmesh;$(SolutionDir)..\..\src\util;$(MPIR_LIB);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\src;$(ProjectDir)..\..\src\accel;$(ProjectDir)..\..\src\file_formats;$(ProjectDir)..\..\src\isct;$(ProjectDir)..\..\src\math;$(ProjectDir)..\..\src\mesh;$(ProjectDir)..\..\src\rawmesh;$(ProjectDir)..\..\src\util;$(MPIR_LIB);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_USE_MATH_DEFINES;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
@@ -86,7 +91,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\src;$(SolutionDir)..\..\src\accel;$(SolutionDir)..\..\src\file_formats;$(SolutionDir)..\..\src\isct;$(SolutionDir)..\..\src\math;$(SolutionDir)..\..\src\mesh;$(SolutionDir)..\..\src\rawmesh;$(SolutionDir)..\..\src\util;$(MPIR_LIB);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\src;$(ProjectDir)..\..\src\accel;$(ProjectDir)..\..\src\file_formats;$(ProjectDir)..\..\src\isct;$(ProjectDir)..\..\src\math;$(ProjectDir)..\..\src\mesh;$(ProjectDir)..\..\src\rawmesh;$(ProjectDir)..\..\src\util;$(MPIR_LIB);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_USE_MATH_DEFINES;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
     </ClCompile>
@@ -103,7 +108,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\src;$(SolutionDir)..\..\src\accel;$(SolutionDir)..\..\src\file_formats;$(SolutionDir)..\..\src\isct;$(SolutionDir)..\..\src\math;$(SolutionDir)..\..\src\mesh;$(SolutionDir)..\..\src\rawmesh;$(SolutionDir)..\..\src\util;$(MPIR_LIB);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\src;$(ProjectDir)..\..\src\accel;$(ProjectDir)..\..\src\file_formats;$(ProjectDir)..\..\src\isct;$(ProjectDir)..\..\src\math;$(ProjectDir)..\..\src\mesh;$(ProjectDir)..\..\src\rawmesh;$(ProjectDir)..\..\src\util;$(MPIR_LIB);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_USE_MATH_DEFINES;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -120,7 +125,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\src;$(SolutionDir)..\..\src\accel;$(SolutionDir)..\..\src\file_formats;$(SolutionDir)..\..\src\isct;$(SolutionDir)..\..\src\math;$(SolutionDir)..\..\src\mesh;$(SolutionDir)..\..\src\rawmesh;$(SolutionDir)..\..\src\util;$(MPIR_LIB);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\..\src;$(ProjectDir)..\..\src\accel;$(ProjectDir)..\..\src\file_formats;$(ProjectDir)..\..\src\isct;$(ProjectDir)..\..\src\math;$(ProjectDir)..\..\src\mesh;$(ProjectDir)..\..\src\rawmesh;$(ProjectDir)..\..\src\util;$(MPIR_LIB);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_USE_MATH_DEFINES;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>

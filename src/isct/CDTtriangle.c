@@ -359,7 +359,7 @@
 #include <fpu_control.h>
 #endif /* LINUX */
 #ifdef TRILIBRARY
-#include "triangle.h"
+#include "CDTtriangle.h"
 #endif /* TRILIBRARY */
 
 /* A few forward declarations.                                               */

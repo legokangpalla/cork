@@ -25,11 +25,6 @@
 // +-------------------------------------------------------------------------
 #pragma once
 
-#ifdef MAKEDLL
-#  define EXPORT __declspec(dllexport)
-#else
-#  define EXPORT __declspec(dllimport)
-#endif
 
 #ifndef uint
 typedef unsigned int uint;
@@ -39,7 +34,7 @@ typedef unsigned int uint;
 // if a mesh is given as output, please use the provided
 // function to free the allocated memory.
 
-struct EXPORT CorkTriMesh
+struct  CorkTriMesh
 {
     uint    n_triangles;
     uint    n_vertices;
@@ -47,7 +42,7 @@ struct EXPORT CorkTriMesh
     float   *vertices;
 };
 
-EXPORT void freeCorkTriMesh(CorkTriMesh *mesh);
+ void freeCorkTriMesh(CorkTriMesh *mesh);
 
 // the inputs to Boolean operations must be "solid":
 //  -   closed (aka. watertight; see comment at bottom)
@@ -57,25 +52,25 @@ EXPORT void freeCorkTriMesh(CorkTriMesh *mesh);
 // orientation, the object is interpreted as its unbounded complement
 
 // This function will test whether or not a mesh is solid
-EXPORT bool isSolid(CorkTriMesh mesh);
+ bool isSolid(CorkTriMesh mesh);
 
 // Boolean operations follow
 // result = A U B
-EXPORT void computeUnion(CorkTriMesh in0, CorkTriMesh in1, CorkTriMesh *out);
+ void computeUnion(CorkTriMesh in0, CorkTriMesh in1, CorkTriMesh *out);
 
 // result = A - B
-EXPORT void computeDifference(CorkTriMesh in0, CorkTriMesh in1, CorkTriMesh *out);
+ void computeDifference(CorkTriMesh in0, CorkTriMesh in1, CorkTriMesh *out);
 
 // result = A ^ B
-EXPORT void computeIntersection(CorkTriMesh in0, CorkTriMesh in1, CorkTriMesh *out);
+ void computeIntersection(CorkTriMesh in0, CorkTriMesh in1, CorkTriMesh *out);
 
 // result = A XOR B
-EXPORT void computeSymmetricDifference(
+ void computeSymmetricDifference(
                         CorkTriMesh in0, CorkTriMesh in1, CorkTriMesh *out);
 
 // Not a Boolean operation, but related:
 //  No portion of either surface is deleted.  However, the
 //  curve of intersection between the two surfaces is made explicit,
 //  such that the two surfaces are now connected.
-EXPORT void resolveIntersections(CorkTriMesh in0, CorkTriMesh in1, CorkTriMesh *out);
+ void resolveIntersections(CorkTriMesh in0, CorkTriMesh in1, CorkTriMesh *out);
 

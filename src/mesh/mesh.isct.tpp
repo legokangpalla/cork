@@ -35,7 +35,7 @@
 
 #define REAL double
 extern "C" {
-#include "triangle.h"
+#include "CDTtriangle.h"
 }
 
 struct GenericVertType;

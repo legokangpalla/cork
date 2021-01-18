@@ -135,13 +135,13 @@
     <ClInclude Include="..\..\src\cork.h" />
     <ClInclude Include="..\..\src\file_formats\files.h" />
     <ClInclude Include="..\..\src\isct\absext4.h" />
+    <ClInclude Include="..\..\src\isct\CDTtriangle.h" />
     <ClInclude Include="..\..\src\isct\empty3d.h" />
     <ClInclude Include="..\..\src\isct\ext4.h" />
     <ClInclude Include="..\..\src\isct\fixext4.h" />
     <ClInclude Include="..\..\src\isct\fixint.h" />
     <ClInclude Include="..\..\src\isct\gmpext4.h" />
     <ClInclude Include="..\..\src\isct\quantization.h" />
-    <ClInclude Include="..\..\src\isct\triangle.h" />
     <ClInclude Include="..\..\src\isct\unsafeRayTriIsct.h" />
     <ClInclude Include="..\..\src\math\bbox.h" />
     <ClInclude Include="..\..\src\math\ray.h" />
@@ -168,14 +168,9 @@
     <ClCompile Include="..\..\src\file_formats\files.cpp" />
     <ClCompile Include="..\..\src\file_formats\ifs.cpp" />
     <ClCompile Include="..\..\src\file_formats\off.cpp" />
+    <ClCompile Include="..\..\src\isct\CDTtriangle.c" />
     <ClCompile Include="..\..\src\isct\empty3d.cpp" />
     <ClCompile Include="..\..\src\isct\quantization.cpp" />
-    <ClCompile Include="..\..\src\isct\triangle.c">
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NO_TIMER;REDUCED;CDT_ONLY;TRILIBRARY;ANSI_DECLARATORS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NO_TIMER;REDUCED;CDT_ONLY;TRILIBRARY;ANSI_DECLARATORS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NO_TIMER;REDUCED;CDT_ONLY;TRILIBRARY;ANSI_DECLARATORS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NO_TIMER;REDUCED;CDT_ONLY;TRILIBRARY;ANSI_DECLARATORS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-    </ClCompile>
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\util\log.cpp" />
     <ClCompile Include="..\..\src\util\timer.cpp" />

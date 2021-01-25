@@ -105,13 +105,13 @@
     <ClInclude Include="..\..\src\isct\quantization.h">
       <Filter>Header Files\isct</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\isct\triangle.h">
-      <Filter>Header Files\isct</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\isct\unsafeRayTriIsct.h">
       <Filter>Header Files\isct</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\cork.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\isct\CDTtriangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -157,13 +157,13 @@
     <ClCompile Include="..\..\src\isct\quantization.cpp">
       <Filter>Source Files\isct</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\isct\triangle.c">
-      <Filter>Source Files\isct</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\cork.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\isct\CDTtriangle.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

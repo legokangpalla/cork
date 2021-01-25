@@ -24,11 +24,7 @@
 // |    along with Cork.  If not, see <http://www.gnu.org/licenses/>.
 // +-------------------------------------------------------------------------
 #pragma once
-#ifdef MAKEDLL
-#  define EXPORT __declspec(dllexport)
-#else
-#  define EXPORT __declspec(dllimport)
-#endif
+
 #include <string>
 
 //#include "triMesh.h"
@@ -54,14 +50,14 @@ typedef RawMesh<FileVertex,FileTriangle> FileMesh;
 
 // generic filetype functions
 // these detect which filetype to use by inspecting the filename
-int EXPORT readTriMesh(std::string filename, FileMesh *mesh);
-int EXPORT writeTriMesh(std::string filename, FileMesh *mesh);
+int  readTriMesh(std::string filename, FileMesh *mesh);
+int  writeTriMesh(std::string filename, FileMesh *mesh);
 
 // specific filetype functions
-int EXPORT readIFS(std::string filename, FileMesh *mesh);
-int EXPORT writeIFS(std::string filename, FileMesh *mesh);
+int  readIFS(std::string filename, FileMesh *mesh);
+int  writeIFS(std::string filename, FileMesh *mesh);
 
-int EXPORT readOFF(std::string filename, FileMesh *mesh);
-int EXPORT writeOFF(std::string filename, FileMesh *mesh);
+int  readOFF(std::string filename, FileMesh *mesh);
+int  writeOFF(std::string filename, FileMesh *mesh);
 
 } // end namespace Files
